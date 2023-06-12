@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 #@app.route('/')
 pickle_in = open("Forest.pkl","rb")
+classifier = pickle.load(pickle_in)
 
 def home():
 	return render_template('Loan_Prediction.html')
