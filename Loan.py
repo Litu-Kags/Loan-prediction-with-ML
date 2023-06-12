@@ -2,9 +2,11 @@ from flask import Flask, render_template,url_for, request
 import flask_sqlalchemy
 from sklearn.externals import joblib
 import numpy as np
+import streamlit as st
 app = Flask(__name__)
 
-@app.route('/')
+#@app.route('/')
+pickle_in = open("Forest.pkl","rb")
 
 def home():
 	return render_template('Loan_Prediction.html')
